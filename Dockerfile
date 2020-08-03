@@ -6,6 +6,5 @@ WORKDIR /home
 RUN git clone https://github.com/nik-johnson-net/prometheus-smarthome.git
 #Set working directory
 WORKDIR /home/prometheus-smarthome/cmd/prometheus-smarthome
-RUN pwd && ls -la
 RUN go build
-ENTRYPOINT ["/home/prometheus-smarthome/cmd/prometheus-smarthome/prometheus-smarthome -port 2112"]
+ENTRYPOINT ["/home/prometheus-smarthome/cmd/prometheus-smarthome/prometheus-smarthome", " -port 2112"]
