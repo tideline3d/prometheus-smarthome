@@ -8,4 +8,4 @@ RUN git clone https://github.com/nik-johnson-net/prometheus-smarthome.git
 WORKDIR /home/prometheus-smarthome/cmd/prometheus-smarthome
 RUN pwd && ls -la
 RUN go build
-RUN ./prometheus-smarthome -port 2112
+ENTRYPOINT ["/home/prometheus-smarthome/cmd/prometheus-smarthome/prometheus-smarthome -port 2112"]
