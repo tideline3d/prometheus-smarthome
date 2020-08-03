@@ -8,4 +8,4 @@ RUN git clone https://github.com/nik-johnson-net/prometheus-smarthome.git
 WORKDIR /home/prometheus-smarthome/cmd/prometheus-smarthome
 RUN go build
 EXPOSE 2112
-ENTRYPOINT ["/home/prometheus-smarthome/cmd/prometheus-smarthome/prometheus-smarthome", " -listen 0.0.0.0 -port 2112"]
+CMD /home/prometheus-smarthome/cmd/prometheus-smarthome/prometheus-smarthome -listen 0.0.0.0 -port 2112
